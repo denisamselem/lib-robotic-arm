@@ -17,11 +17,14 @@ module.exports.cartesianToSpherical = function(cart) {
   if (cart.z < 0) {
     theta = 2 * Math.PI - theta;
   }
+  if(isNaN(theta)) {
+    theta = 0;
+  }
 
   return {
     r: r,
     theta: theta,
-    phi: Math.asin(cart.y / r),
+    phi: (r === 0) ? 0 : Math.asin(cart.y / r),
   };
 };
 
