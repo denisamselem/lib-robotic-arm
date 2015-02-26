@@ -17,3 +17,9 @@ In the examples, a green cube is put anywhere on the screen and the robot grab i
 A animated example show how the robot can follow a point.
 
 ![Basic example screenshot](https://github.com/arthurlm/lib-robotic-arm/blob/master/img/basic-example.jpg)
+
+## Build
+
+For basic example, run `grunt basic-example` then open `src/examples/example.html`
+
+For basic animated, run `grunt animated-example` then open `src/examples/example.html`

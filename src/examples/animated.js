@@ -21,7 +21,7 @@ var AMPLITURE = 8;
 requestAnimationFrame(render);
 var frame = 0;
 function render() {
-  webgl.renderer.render(webgl.scene, webgl.camera);
+  webgl.render();
 
   frame ++;
 

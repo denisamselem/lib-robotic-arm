@@ -16,6 +16,6 @@ webgl.scene.add(boxFactory(target));
 
 requestAnimationFrame(render);
 function render() {
-  webgl.renderer.render(webgl.scene, webgl.camera);
+  webgl.render();
   requestAnimationFrame(render);
 }

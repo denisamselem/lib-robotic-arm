@@ -32,6 +32,9 @@ function initScene() {
     renderer: renderer,
     scene: scene,
     camera: camera,
+    render: function() {
+      renderer.render(scene, camera);
+    }
   };
 }
 
