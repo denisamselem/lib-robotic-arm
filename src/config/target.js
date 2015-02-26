@@ -1,5 +1,8 @@
 module.exports = {
-  WIDTH: 2,
-  LENGTH: 4,
-  HEIGHT: 1.2,
+  width: 2,
+  length: 4,
+  height: 1.2,
+  x: Math.random() * 20 - 10,
+  y: Math.random() * 20,
+  z: Math.random() * 20 - 10,
 };

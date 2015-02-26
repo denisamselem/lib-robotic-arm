@@ -1,8 +1,8 @@
-module.exports.cartesianToRobotSpace = function(robotConfig, targetConfig, position) {
+module.exports.cartesianToRobotSpace = function(robotConfig, target) {
   return {
-    x: position.x,
-    y: position.y - robotConfig.PEDESTRAL.SIZE + robotConfig.PLIER.HEIGHT + targetConfig.HEIGHT / 2,
-    z: position.z,
+    x: target.x,
+    y: target.y - robotConfig.PEDESTRAL.SIZE + robotConfig.PLIER.HEIGHT + target.height / 2,
+    z: target.z,
   };
 };
 

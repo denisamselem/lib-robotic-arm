@@ -1,7 +1,7 @@
 var THREE = require('three');
 
-module.exports = function(target, geometry) {
-  var box = new THREE.Mesh(new THREE.BoxGeometry(geometry.WIDTH, geometry.HEIGHT, geometry.LENGTH), new THREE.MeshPhongMaterial({
+module.exports = function(target) {
+  var box = new THREE.Mesh(new THREE.BoxGeometry(target.width, target.height, target.length), new THREE.MeshPhongMaterial({
     color: 0x5fd338,
   }));
   box.position.x = target.x;
