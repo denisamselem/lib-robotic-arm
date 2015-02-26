@@ -15,3 +15,5 @@ It includes :
 In the examples, a green cube is put anywhere on the screen and the robot grab it.
 
 A animated example show how the robot can follow a point.
+
+![Basic example screenshot](https://github.com/arthurlm/lib-robotic-arm/blob/master/img/basic-example.jpg)
