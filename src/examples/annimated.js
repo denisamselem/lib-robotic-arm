@@ -12,10 +12,6 @@ var webgl = webGlFactory();
 webgl.scene.add(arm.visualisation.mesh);
 webgl.scene.add(box);
 
-Number.prototype.clamp = function(min, max) {
-  return Math.min(Math.max(this, min), max);
-};
-
 var SPEED_X = 0.01;
 var SPEED_Y = 0.06;
 var SPEED_Z = 0.05;

@@ -4,16 +4,22 @@ module.exports = function(grunt) {
     jshint: {
       all: [
         "src/*.js",
+        "src/config/*.js",
         "src/examples/*.js",
         "src/visualisation/*.js"
       ]
     },
     browserify: {
-      examples: {
+      basic: {
         files: {
-          "build/armVisualisation.js": "src/examples/visualisation.js"
+          "build/armVisualisation.js": "src/examples/basic.js"
         }
-      }
+      },
+      annimated: {
+        files: {
+          "build/armVisualisation.js": "src/examples/annimated.js"
+        }
+      },
     },
     uglify: {
 
@@ -24,7 +30,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('default', ['jshint:all', 'browserify:examples']);
-  grunt.registerTask('dev', ['browserify:examples']);
-
+  grunt.registerTask('default', ['jshint:all']);
+  grunt.registerTask('basic-example', ['jshint:all', 'browserify:basic']);
+  grunt.registerTask('annimated-example', ['jshint:all', 'browserify:annimated']);
 };
