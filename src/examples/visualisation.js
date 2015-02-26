@@ -8,7 +8,8 @@ var SceneLights = require('../visualisation/SceneLights');
 var rendererFactory = require('../visualisation/rendererFactory');
 var boxFactory = require('../visualisation/boxFactory.js');
 
-var defaultConfig = require('../geometryConst');
+var robotConfig = require('../config/robot');
+var targetConfig = require('../config/target');
 
 var renderer = null,
   scene = null,
@@ -29,11 +30,13 @@ function initScene() {
   scene.add(new Ground());
   scene.add(new Repere());
   scene.add(new SceneLights());
-  scene.add(boxFactory(target, defaultConfig.LEGO));
+  scene.add(boxFactory(target, targetConfig));
 
-  var arm = new Arm(defaultConfig);
+  // HERE WE GO FOR ROBOTIC ARM
+  var arm = new Arm(robotConfig);
   scene.add(arm.visualisation.mesh);
-  arm.goToPosition(target);
+  arm.goToPosition(target, targetConfig);
+  // END OF ROBOTIC ARM CONFIG AND ACTION
 
   renderer = rendererFactory();
   renderer.setSize(width, height);

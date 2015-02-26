@@ -16,10 +16,5 @@ module.exports = {
   FINGER: {
     HEIGHT: 2,
     WIDTH: 1,
-  },
-  LEGO: {
-    WIDTH: 2,
-    LENGTH: 4,
-    HEIGHT: 1.2,
   }
 };

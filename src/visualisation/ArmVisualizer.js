@@ -60,8 +60,8 @@ function ArmVisualizer(config) {
   this.config = config;
 }
 
-ArmVisualizer.prototype.goToPosition = function(target) {
-  var plierPosition = converters.cartesianToRobotSpace(this.config, target);
+ArmVisualizer.prototype.goToPosition = function(target, targetConfig) {
+  var plierPosition = converters.cartesianToRobotSpace(this.config, targetConfig, target);
   var sph = converters.cartesianToSpherical(plierPosition);
   var ang = converters.sphericalToRobotAngles(this.config, sph);
 
