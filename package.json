@@ -1,0 +1,26 @@
+{
+  "name": "lib-robotic-arm",
+  "version": "1.0.0",
+  "description": "A NodeJS library to control robotic arm and have 3D visualisation with WebGL",
+  "author": "Arthur LE MOIGNE",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arthurlm/lib-robotic-arm.git"
+  },
+  "scripts": {
+    "postinstall": "grunt"
+  },
+  "homepage": "https://github.com/arthurlm/lib-robotic-arm",
+  "dependencies": {
+    "jquery": "^2.1.3",
+    "three": "^0.70.0",
+    "three-orbit-controls": "^69.0.4"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^3.4.0",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-contrib-uglify": "^0.8.0"
+  }
+}
