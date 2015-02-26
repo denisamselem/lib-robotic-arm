@@ -7,6 +7,7 @@ module.exports = function(target) {
   box.position.x = target.x;
   box.position.y = target.y;
   box.position.z = target.z;
+  box.rotation.y = target.rotation;
 
   return box;
 };

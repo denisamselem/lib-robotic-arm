@@ -69,7 +69,7 @@ ArmVisualizer.prototype.goToPosition = function(target) {
   this.pivot1Angle.z = ang.alpha1;
   this.pivot2Angle.z = ang.alpha2 + Math.PI;
   this.pivot3Angle.z = ang.alpha3;
-  this.plierAngle.y = ang.theta;
+  this.plierAngle.y = ang.theta - target.rotation;
 };
 
 module.exports = ArmVisualizer;
