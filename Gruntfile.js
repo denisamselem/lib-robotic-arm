@@ -12,12 +12,12 @@ module.exports = function(grunt) {
     browserify: {
       basic: {
         files: {
-          "build/armVisualisation.js": "src/examples/basic.js"
+          "src/examples/build/app.js": "src/examples/basic.js"
         }
       },
-      annimated: {
+      animated: {
         files: {
-          "build/armVisualisation.js": "src/examples/annimated.js"
+          "src/examples/build/app.js": "src/examples/animated.js"
         }
       },
     },
@@ -32,5 +32,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['jshint:all']);
   grunt.registerTask('basic-example', ['jshint:all', 'browserify:basic']);
-  grunt.registerTask('annimated-example', ['jshint:all', 'browserify:annimated']);
+  grunt.registerTask('animated-example', ['jshint:all', 'browserify:animated']);
 };
